@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>跨域获取WebApi资源</h2>
+<input type="button" id="GetWebApiResource" value="获取资源" />
+<input type="button" id="ApplyToken" value="申请token"/>
+<br /><br /><br />
+测试结果：<div id="div_test"></div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $("#ApplyToken").click(function () {
+        $.ajax({
+            type: "get",
+            url: "home/applyToken",
+            data: {},
+            success: function (data, status) {
+                if (status == "success") {
+                    $("#div_test").html(data);
+                }
+            },
+            error: function (e) {
+                $("#div_test").html("Error");
+            }
+        });
+    });
+       
+    $("#GetWebApiResource").click(function () {
+        $.ajax({
+            type: "get",
+            url: "home/GetResource",
+            data: {},
+            success: function (data, status) {
+                if (status == "success") {
+                    $("#div_test").html(data);
+                }
+            },
+            error: function (e) {
+                $("#div_test").html("Error");
+            }
+        });
+    });
+</script>
+
