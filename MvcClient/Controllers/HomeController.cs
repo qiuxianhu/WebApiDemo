@@ -54,5 +54,14 @@ namespace MvcClient.Controllers
             User userResult = JsonHelper.ConvertStrToJson<User>(jsonModel.Data.ToString());
             return userResult.Name+"的岁数是："+userResult.Age;
         }
+
+        [HttpGet]
+        public string GetResource1()
+        {            
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _AccessToken);
+            string returnResult = _httpClient.GetAsync(new Uri(new Uri("http://localhost:8011/"), "api/Home")).Result.Content.ReadAsStringAsync().Result;
+           
+            return returnResult;
+        }
     }
 }

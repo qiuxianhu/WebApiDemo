@@ -4,7 +4,8 @@
 }
 
 <h2>跨域获取WebApi资源</h2>
-<input type="button" id="GetWebApiResource" value="获取资源" />
+<input type="button" id="GetWebApiResource" value="获取资源(传参)" />
+<input type="button" id="GetResource1" value="获取资源（无参）"/>
 <input type="button" id="ApplyToken" value="申请token"/>
 <br /><br /><br />
 测试结果：<div id="div_test"></div>
@@ -30,6 +31,22 @@
         $.ajax({
             type: "get",
             url: "home/GetResource",
+            data: {},
+            success: function (data, status) {
+                if (status == "success") {
+                    $("#div_test").html(data);
+                }
+            },
+            error: function (e) {
+                $("#div_test").html("Error");
+            }
+        });
+    });
+
+    $("#GetResource1").click(function () {
+        $.ajax({
+            type: "get",
+            url: "home/GetResource1",
             data: {},
             success: function (data, status) {
                 if (status == "success") {

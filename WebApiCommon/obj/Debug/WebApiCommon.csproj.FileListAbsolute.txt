@@ -33,3 +33,4 @@ F:\个人信息\Demo\WebApiDemo\WebApiCommon\obj\Debug\WebApiCommon.csproj.CopyC
 F:\个人信息\Demo\WebApiDemo\WebApiCommon\obj\Debug\WebApiCommon.dll
 F:\个人信息\Demo\WebApiDemo\WebApiCommon\obj\Debug\WebApiCommon.pdb
 F:\个人信息\Demo\WebApiDemo\WebApiCommon\bin\Debug\System.Web.Http.dll
+F:\个人信息\Demo\WebApiDemo\WebApiCommon\obj\Debug\WebApiCommon.csprojAssemblyReference.cache

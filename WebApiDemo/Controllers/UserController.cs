@@ -18,6 +18,11 @@ namespace WebApiDemo.Controllers
             DateFormatString = @"yyyy/MM/dd HH:mm:ss"
         };
         [HttpGet]
+        public string GetName()
+        {
+            return "qiuxainhu";
+        }
+        [HttpPost]
         public HttpResponseMessage GetUserInfo([ModelBinder(typeof(FormRawBinder<User>))] User user)
         {
             User userResult = new User()
